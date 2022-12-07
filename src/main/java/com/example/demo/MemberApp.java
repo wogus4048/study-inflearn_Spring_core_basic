@@ -1,4 +1,9 @@
-package com.example.demo.member;
+package com.example.demo;
+
+import com.example.demo.member.Grade;
+import com.example.demo.member.Member;
+import com.example.demo.member.MemberService;
+import com.example.demo.member.MemberServiceImpl;
 
 public class MemberApp {
 
