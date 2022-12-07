@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.projectlombok:lombok:1.18.22'  //@Getter와 같은 어노테이션 사용하기 위해 롬복 추가
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
