@@ -5,7 +5,11 @@ public class MemberServiceImpl implements MemberService {
 
     // 멤버 리포지토리안에 있는 메소드를 사용해야하므로 선언해준다.
     //인터페이스 변수를 만들고 , 그 안에 구현체객체를 저장해준다. (다형성을 이용함)
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public void join(Member member) {
