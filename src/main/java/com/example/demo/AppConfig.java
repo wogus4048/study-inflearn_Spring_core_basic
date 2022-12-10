@@ -9,7 +9,7 @@ import com.example.demo.member.MemoryMemberRepository;
 import com.example.demo.order.OrderService;
 import com.example.demo.order.OrderServiceImpl;
 
-public class AppConfig {
+public class AppConfig { //프로젝트의 객체 생성,구성,주입 환경설정을 하는 중요 역할
 
     public MemberService memberService() {
         return new MemberServiceImpl(MemberRepository());
