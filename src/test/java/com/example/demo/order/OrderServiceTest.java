@@ -17,7 +17,7 @@ public class OrderServiceTest {
 
     @BeforeEach
     public void beforeEach() {
-        AppConfig appConfig = new AppConfig();
+        AppConfig appConfig = new AppConfig(); //테스트에서도 AppConfig를 이용
         memberService = appConfig.memberService();
         orderService = appConfig.orderService();
     }
