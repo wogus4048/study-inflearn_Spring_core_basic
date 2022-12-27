@@ -34,7 +34,7 @@ public class ApplicationContextBasicFindTest {
     void findBeanByType() {
         MemberService memberService = ac.getBean(MemberService.class); // 이름빼고 타입으로만 조회해서 가져와본다.
         assertThat(memberService).isInstanceOf(
-            MemberServiceImpl.class);// 받아온 멤버서비스가 멤버서비스임플의 객체냐? 라고 물어보는 메소드
+            MemberService.class);// 받아온 멤버서비스가 멤버서비스임플의 객체냐? 라고 물어보는 메소드
     }
 
     @Test
