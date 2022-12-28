@@ -2,7 +2,9 @@ package com.example.demo.member;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MemoryMemberRepository implements MemberRepository {
 
     //원래는 실무에서 저장소 동시접근 오류때문에 HashMap이 아닌 ConcurrentHashMap을 사용해야한다고 한다. (예제니까 넘어감)
