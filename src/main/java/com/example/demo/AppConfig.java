@@ -17,14 +17,17 @@ public class AppConfig { //프로젝트의 객체 생성,구성,주입 환경설
 
     @Bean
     public MemberService memberService() {
+        System.out.println("AppConfig.memberService");
         return new MemberServiceImpl(MemberRepository());
     }
     @Bean
     public MemberRepository MemberRepository() {
+        System.out.println("AppConfig.MemberRepository");
         return new MemoryMemberRepository();
     }
     @Bean
     public OrderService orderService() {
+        System.out.println("AppConfig.orderService");
         return new OrderServiceImpl(MemberRepository(), DiscountPolicy());
     }
     @Bean
