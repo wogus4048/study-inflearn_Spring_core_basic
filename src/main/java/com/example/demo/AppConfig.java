@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
+
 @Configuration
 public class AppConfig { //프로젝트의 객체 생성,구성,주입 환경설정을 하는 중요 역할
 

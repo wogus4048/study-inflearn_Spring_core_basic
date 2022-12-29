@@ -7,8 +7,10 @@ import com.example.demo.member.Member;
 import com.example.demo.member.MemberRepository;
 import com.example.demo.member.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
+@Primary
 @Component
 public class OrderServiceImpl implements OrderService {
 
