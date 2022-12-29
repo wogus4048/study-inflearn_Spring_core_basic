@@ -1,11 +1,13 @@
 package com.example.demo.member;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Primary
 @Component
+@RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService {
     //MemberService의 구현체가 1개인경우 구현체 뒤에 Impl이라는 단어를 붙여 생성하는게 관례상 많이 쓰는 방법이라고 한다.
 
@@ -13,12 +15,6 @@ public class MemberServiceImpl implements MemberService {
     //인터페이스 변수를 만들고 , 그 안에 구현체객체를 저장해준다. (다형성을 이용함)
 
     private final MemberRepository memberRepository;
-
-    @Autowired
-    public MemberServiceImpl(MemberRepository memberRepository) {
-        System.out.println("멤버서비스임플 생성자 호출");
-        this.memberRepository = memberRepository;
-    }
 
     @Override
     public void join(Member member) {
