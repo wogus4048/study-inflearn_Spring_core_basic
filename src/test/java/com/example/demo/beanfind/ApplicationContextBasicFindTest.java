@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.example.demo.AppConfig;
+import com.example.demo.discount.DiscountPolicy;
+import com.example.demo.member.MemberRepository;
 import com.example.demo.member.MemberService;
 import com.example.demo.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
@@ -27,6 +29,9 @@ public class ApplicationContextBasicFindTest {
         assertThat(memberService).isInstanceOf(
             MemberServiceImpl.class);// 받아온 멤버서비스가 멤버서비스임플의 객체냐? 라고 물어보는 메소드
         //Assertions는 알트엔터로 static화 한다.
+
+        ac.getBean(MemberRepository.class);
+        ac.getBean(DiscountPolicy.class);
     }
 
     @Test
